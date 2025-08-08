@@ -28,21 +28,25 @@ export function Pricing() {
   ]
 
   return (
-    <section className="container-max py-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Simple pricing</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+    <section className="container-max py-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Simple pricing</h2>
+      <p className="text-center text-gray-600 dark:text-gray-300 mb-10">Start free. Upgrade when you are ready.</p>
+      <div className="grid md:grid-cols-2 gap-8">
         {tiers.map((t) => (
-          <div key={t.name} className={`card p-6 ${t.highlight ? 'ring-2 ring-brand-500' : ''}`}>
-            <div className="flex items-baseline justify-between mb-4">
-              <h3 className="text-xl font-semibold">{t.name}</h3>
-              <p className="text-2xl font-bold">{t.price}</p>
+          <div key={t.name} className="relative rounded-2xl p-[1px]">
+            <div className={`absolute -inset-0.5 rounded-2xl ${t.highlight ? 'bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400' : 'bg-white/10'} blur`}></div>
+            <div className="relative rounded-2xl glass p-6">
+              <div className="flex items-baseline justify-between mb-4">
+                <h3 className="text-xl font-semibold">{t.name}</h3>
+                <p className="text-3xl font-extrabold">{t.price}</p>
+              </div>
+              <ul className="space-y-2 mb-6">
+                {t.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2"><span>✨</span><span>{f}</span></li>
+                ))}
+              </ul>
+              {t.cta}
             </div>
-            <ul className="space-y-2 mb-6">
-              {t.features.map((f) => (
-                <li key={f} className="flex items-center gap-2"><span>✅</span><span>{f}</span></li>
-              ))}
-            </ul>
-            {t.cta}
           </div>
         ))}
       </div>
