@@ -12,7 +12,7 @@ const PRESETS: Record<CanvasPreset, { width: number; height: number; bg: string 
 
 export function CanvasEditor({ preset, watermark }: { preset: CanvasPreset; watermark?: boolean }) {
   const ref = useRef<HTMLCanvasElement | null>(null)
-  const [canvas, setCanvas] = useState<fabric.Canvas | null>(null)
+  const [canvas, setCanvas] = useState<any | null>(null)
 
   useEffect(() => {
     if (!ref.current) return
@@ -47,7 +47,7 @@ export function CanvasEditor({ preset, watermark }: { preset: CanvasPreset; wate
     const reader = new FileReader()
     reader.onload = () => {
       if (!reader.result) return
-      fabric.Image.fromURL(reader.result as string, (img) => {
+      fabric.Image.fromURL(reader.result as string, (img: any) => {
         img.scaleToWidth(800)
         img.set({ left: 100, top: 100 })
         canvas?.add(img).setActiveObject(img)
