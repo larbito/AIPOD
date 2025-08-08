@@ -1,11 +1,12 @@
 "use client"
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 type Tier = {
   name: string
   price: string
   features: string[]
-  cta: JSX.Element
+  cta: ReactNode
   highlight?: boolean
 }
 
