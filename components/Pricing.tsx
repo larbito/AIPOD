@@ -1,8 +1,16 @@
 "use client"
 import Link from 'next/link'
 
+type Tier = {
+  name: string
+  price: string
+  features: string[]
+  cta: JSX.Element
+  highlight?: boolean
+}
+
 export function Pricing() {
-  const tiers = [
+  const tiers: Tier[] = [
     {
       name: 'Free',
       price: '$0',
@@ -16,7 +24,7 @@ export function Pricing() {
       cta: <form action="/api/checkout" method="post"><button className="btn-primary w-full">Go Pro</button></form>,
       highlight: true,
     },
-  ] as const
+  ]
 
   return (
     <section className="container-max py-16">
