@@ -25,7 +25,7 @@ export function NavBar() {
   ] as const
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-white/40 dark:bg-white/5 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-gray-200/60 dark:border-white/10 bg-white/70 dark:bg-[#0c0c10]/70 backdrop-blur-xl">
       <div className="container-max flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 font-semibold">
@@ -34,7 +34,7 @@ export function NavBar() {
           </Link>
           <nav className="hidden md:flex items-center gap-5 ml-6 text-sm">
             {navLinks.map((l) => (
-              <Link key={l.href} href={l.href} className="relative hover:text-white">
+              <Link key={l.href} href={l.href} className="relative text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white">
                 <span className="after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-indigo-500 after:to-emerald-400 after:transition-all hover:after:w-full">{l.label}</span>
               </Link>
             ))}

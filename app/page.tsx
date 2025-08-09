@@ -10,9 +10,9 @@ export default function HomePage() {
       <section id="about" className="relative overflow-hidden">
         <div className="container-max py-20 md:py-28 relative">
           <div className="relative z-10 max-w-4xl">
-            <span className="badge mb-4">Next‑gen studio for POD creators</span>
+            <span className="badge mb-4">For creators, authors, and merch brands</span>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
-              <span className="text-gradient">Design covers, coloring books, and tees with AI</span>
+              <span className="text-gradient">Create print‑ready designs with AI</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
               AIPOD Studio helps you generate ready‑to‑sell assets for KDP and print‑on‑demand. Modern canvas, fast exports, and AI‑assisted creation.

@@ -17,21 +17,22 @@
 html, body { height: 100%; }
 
 body {
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,0.25), transparent 60%),
-              radial-gradient(1200px 600px at 100% 10%, rgba(56,189,248,0.18), transparent 60%),
-              rgb(var(--background));
+  background:
+    radial-gradient(1000px 480px at 0% -10%, rgba(99,102,241,0.10), transparent 60%),
+    radial-gradient(1000px 480px at 100% 0%, rgba(56,189,248,0.08), transparent 60%),
+    rgb(var(--background));
   color: rgb(var(--foreground));
 }
 
 .container-max { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-.card { @apply rounded-2xl border border-white/10 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-xl shadow-lg shadow-brand-500/10; }
+.card { @apply rounded-2xl border border-gray-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-xl shadow-sm; }
 
-.glass { @apply border border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-xl; }
+.glass { @apply border border-gray-200/60 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-xl; }
 
-.btn { @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:scale-[1.02] active:scale-[0.99]; }
-.btn-primary { @apply btn text-white bg-gradient-to-r from-brand-500 via-indigo-500 to-sky-400 shadow-[0_0_30px_rgba(99,102,241,0.35)] focus:ring-indigo-500; }
-.btn-secondary { @apply btn bg-white/70 dark:bg-white/10 hover:bg-white/80 dark:hover:bg-white/15; }
+.btn { @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:-translate-y-0.5 active:translate-y-0; }
+.btn-primary { @apply btn text-white bg-gradient-to-r from-brand-500 via-indigo-500 to-sky-400 shadow-[0_10px_30px_rgba(99,102,241,0.25)] focus:ring-indigo-500; }
+.btn-secondary { @apply btn border border-gray-200/70 dark:border-white/10 bg-transparent hover:bg-white/70 dark:hover:bg-white/10; }
 
 .badge { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-white/60 dark:bg-white/10 backdrop-blur; }
 
@@ -48,11 +49,11 @@ body {
 .beams::before,
 .beams::after {
   content: ""; position: absolute; inset: -20%;
-  background: conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,0.12), rgba(34,211,238,0.12), rgba(99,102,241,0.12));
-  filter: blur(64px); animation: spin-slow 24s linear infinite;
+  background: conic-gradient(from 0deg at 50% 50%, rgba(99,102,241,0.06), rgba(34,211,238,0.06), rgba(99,102,241,0.06));
+  filter: blur(72px); animation: spin-slow 36s linear infinite;
 }
 .beams::after { animation-direction: reverse; opacity: .7; }
 
-.gridlines { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); pointer-events: none; }
+.gridlines { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%); pointer-events: none; }
 
 @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
