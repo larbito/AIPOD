@@ -28,8 +28,8 @@ export function Pricing() {
   ]
 
   return (
-    <section className="container-max py-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Simple pricing</h2>
+    <section className="container-max py-12">
+      <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-2">Simple pricing</h2>
       <p className="text-center text-gray-600 dark:text-gray-300 mb-10">Start free. Upgrade when you are ready.</p>
       <div className="grid md:grid-cols-2 gap-8">
         {tiers.map((t) => (
