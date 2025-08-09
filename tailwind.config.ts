@@ -7,20 +7,42 @@ const config: Config = {
     './components/**/*.{ts,tsx}',
   ],
   theme: {
+    container: {
+      center: true,
+      screens: { '2xl': '72rem' },
+      padding: {
+        DEFAULT: '1rem',
+        lg: '1.5rem',
+      },
+    },
     extend: {
+      borderRadius: {
+        xl: '1rem',
+        '2xl': '1.25rem',
+        '3xl': '1.5rem',
+      },
       colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: 'hsl(var(--card))',
+        border: 'hsl(var(--border))',
+        primary: {
+          DEFAULT: '#6d28d9',
+        },
+        secondary: {
+          DEFAULT: '#2563eb',
+        },
+        accent: {
+          DEFAULT: '#22d3ee',
+        },
         brand: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
           400: '#818cf8',
           500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81'
-        }
+        },
+      },
+      boxShadow: {
+        md: '0 8px 24px rgba(0,0,0,0.25)',
+        xl: '0 25px 50px -12px rgba(0,0,0,0.35)',
       },
       animation: {
         float: 'float 10s ease-in-out infinite',
@@ -28,9 +50,9 @@ const config: Config = {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }
-        }
-      }
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

@@ -2,6 +2,9 @@ import { Pricing } from '@/components/Pricing'
 import Link from 'next/link'
 import { NeonButton } from '@/components/NeonButton'
 import { GlowCard } from '@/components/GlowCard'
+import { FeatureGrid } from '@/components/landing/FeatureGrid'
+import { Steps } from '@/components/landing/Steps'
+import { LivePreview } from '@/components/landing/LivePreview'
 
 export default function HomePage() {
   return (
@@ -127,6 +130,15 @@ export default function HomePage() {
       <div id="pricing">
         <Pricing />
       </div>
+
+      {/* Feature grid */}
+      <FeatureGrid />
+
+      {/* Steps */}
+      <Steps />
+
+      {/* Live preview */}
+      <LivePreview />
 
       {/* Why Us */}
       <section id="why-us" className="container-max py-16 md:py-24">
